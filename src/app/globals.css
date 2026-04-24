@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+/* ── Brand tokens ── */
+@theme {
+  --color-cream: #F8F7F5;
+  --color-cream-dark: #EDE9E3;
+  --color-dark: #191919;
+  --color-dark-light: #2A2A2A;
+  --color-peach: #F5B684;
+  --color-peach-light: #F9D4B0;
+  --color-peach-dark: #E8984F;
+  --color-warm-gray: #9B9488;
+  --color-warm-gray-light: #C4BFB6;
+
+  --font-heading: "Beiruti", sans-serif;
+  --font-body: "Literata", serif;
+}
+
+/* ── Base styles ── */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-cream);
+  color: var(--color-dark);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+/* ── Texture overlay for artisan feel ── */
+.texture-bg {
+  background-image:
+    radial-gradient(circle at 20% 50%, rgba(245, 182, 132, 0.06) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(245, 182, 132, 0.04) 0%, transparent 50%);
+}
+
+/* ── Glass shimmer animation ── */
+@keyframes shimmer {
+  0% { opacity: 0.3; }
+  50% { opacity: 0.6; }
+  100% { opacity: 0.3; }
+}
+
+.glass-shimmer {
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+/* ── Noscript styles ── */
+noscript .noscript-message {
+  display: block;
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--color-peach-light);
+  color: var(--color-dark);
+}
