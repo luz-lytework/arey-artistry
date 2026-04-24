@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 /* ── Brand tokens ── */
-@theme {
+@theme inline {
   --color-cream: #F8F7F5;
   --color-cream-dark: #EDE9E3;
   --color-dark: #191919;

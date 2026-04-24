@@ -20,10 +20,25 @@ const literata = Literata({
 });
 
 export const metadata: Metadata = {
-  title: "Arey Artistry — Timeless Dishware with Artistic Flare",
+  title: {
+    default: "Arey Artistry — Timeless Dishware with Artistic Flare",
+    template: "%s | Arey Artistry",
+  },
   description:
     "Handcrafted fused glass dishware by Ilene Arey. Timeless bowls, trays, platters, clocks, and spoon rests — each piece uniquely crafted with artistic flare.",
   metadataBase: new URL("https://areyartistry.com"),
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    siteName: "Arey Artistry",
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
@@ -44,10 +59,14 @@ export default function RootLayout({
       <body className="min-h-screen flex flex-col bg-cream text-dark">
         <noscript>
           <div className="noscript-message">
+            <h2>Arey Artistry</h2>
+            <p>Timeless Dishware with Artistic Flare</p>
             <p>
-              This site works best with JavaScript enabled. You can still browse all content,
-              but some interactive features like the product gallery and contact form require JavaScript.
+              Handcrafted fused glass dishware by Ilene Arey. Bowls, trays, platters, clocks,
+              spoon rests, and wall art — each piece uniquely crafted with artistic flare.
             </p>
+            <p>Services: Custom commissions, wholesale, event exhibitions</p>
+            <p>Contact: Visit areyartistry.com/contact to reach Ilene</p>
           </div>
         </noscript>
         <Header />

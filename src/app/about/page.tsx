@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { getPageSections, getTestimonials } from "@/lib/data";
 import { buildMetadata, breadcrumbJsonLd, personJsonLd } from "@/lib/metadata";
 
-export const revalidate = 120;
+export const revalidate = 60;
 
 export const metadata: Metadata = buildMetadata({
   title: "About Ilene",

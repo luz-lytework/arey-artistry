@@ -3,7 +3,7 @@ import { getSiteSettings } from "@/lib/data";
 import { buildMetadata, breadcrumbJsonLd } from "@/lib/metadata";
 import ContactForm from "./ContactForm";
 
-export const revalidate = 120;
+export const revalidate = 60;
 
 export const metadata: Metadata = buildMetadata({
   title: "Contact",
